@@ -1,0 +1,189 @@
+    crossing_agent: rel_x=16.00, rel_y=-5.00, in_zone=False
+    adjacent_agent: rel_x=10.00, rel_y=3.00, in_zone=False
+t=0.0, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=15.50, rel_y=-4.80, in_zone=False
+    adjacent_agent: rel_x=9.80, rel_y=3.00, in_zone=False
+t=0.1, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=15.00, rel_y=-4.60, in_zone=False
+    adjacent_agent: rel_x=9.60, rel_y=3.00, in_zone=False
+t=0.2, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=14.50, rel_y=-4.40, in_zone=False
+    adjacent_agent: rel_x=9.40, rel_y=3.00, in_zone=False
+t=0.3, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=14.00, rel_y=-4.20, in_zone=False
+    adjacent_agent: rel_x=9.20, rel_y=3.00, in_zone=False
+t=0.4, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=13.50, rel_y=-4.00, in_zone=False
+    adjacent_agent: rel_x=9.00, rel_y=3.00, in_zone=False
+t=0.5, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=13.00, rel_y=-3.80, in_zone=False
+    adjacent_agent: rel_x=8.80, rel_y=3.00, in_zone=False
+t=0.6, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=12.50, rel_y=-3.60, in_zone=False
+    adjacent_agent: rel_x=8.60, rel_y=3.00, in_zone=False
+t=0.7, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=12.00, rel_y=-3.40, in_zone=False
+    adjacent_agent: rel_x=8.40, rel_y=3.00, in_zone=False
+t=0.8, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=11.50, rel_y=-3.20, in_zone=False
+    adjacent_agent: rel_x=8.20, rel_y=3.00, in_zone=False
+t=0.9, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=11.00, rel_y=-3.00, in_zone=False
+    adjacent_agent: rel_x=8.00, rel_y=3.00, in_zone=False
+t=1.0, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=10.50, rel_y=-2.80, in_zone=False
+    adjacent_agent: rel_x=7.80, rel_y=3.00, in_zone=False
+t=1.1, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=10.00, rel_y=-2.60, in_zone=False
+    adjacent_agent: rel_x=7.60, rel_y=3.00, in_zone=False
+t=1.2, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=9.50, rel_y=-2.40, in_zone=False
+    adjacent_agent: rel_x=7.40, rel_y=3.00, in_zone=False
+t=1.3, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=9.00, rel_y=-2.20, in_zone=False
+    adjacent_agent: rel_x=7.20, rel_y=3.00, in_zone=False
+t=1.4, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=8.50, rel_y=-2.00, in_zone=False
+    adjacent_agent: rel_x=7.00, rel_y=3.00, in_zone=False
+t=1.5, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=8.00, rel_y=-1.80, in_zone=False
+    adjacent_agent: rel_x=6.80, rel_y=3.00, in_zone=False
+t=1.6, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=7.50, rel_y=-1.60, in_zone=False
+    adjacent_agent: rel_x=6.60, rel_y=3.00, in_zone=False
+t=1.7, v=5.00, a=0.00, danger=False
+    crossing_agent: rel_x=7.00, rel_y=-1.40, in_zone=True
+    adjacent_agent: rel_x=6.40, rel_y=3.00, in_zone=False
+t=1.8, v=5.00, a=-3.00, danger=True
+    crossing_agent: rel_x=6.50, rel_y=-1.20, in_zone=True
+    adjacent_agent: rel_x=6.20, rel_y=3.00, in_zone=False
+t=1.9, v=4.70, a=-3.00, danger=True
+    crossing_agent: rel_x=6.03, rel_y=-1.00, in_zone=True
+    adjacent_agent: rel_x=6.03, rel_y=3.00, in_zone=False
+t=2.0, v=4.40, a=-3.00, danger=True
+    crossing_agent: rel_x=5.59, rel_y=-0.80, in_zone=True
+    adjacent_agent: rel_x=5.89, rel_y=3.00, in_zone=False
+t=2.1, v=4.10, a=-3.00, danger=True
+    crossing_agent: rel_x=5.18, rel_y=-0.60, in_zone=True
+    adjacent_agent: rel_x=5.78, rel_y=3.00, in_zone=False
+t=2.2, v=3.80, a=-3.00, danger=True
+    crossing_agent: rel_x=4.80, rel_y=-0.40, in_zone=True
+    adjacent_agent: rel_x=5.70, rel_y=3.00, in_zone=False
+t=2.3, v=3.50, a=-3.00, danger=True
+    crossing_agent: rel_x=4.45, rel_y=-0.20, in_zone=True
+    adjacent_agent: rel_x=5.65, rel_y=3.00, in_zone=False
+t=2.4, v=3.20, a=-2.55, danger=True
+    crossing_agent: rel_x=4.13, rel_y=0.00, in_zone=True
+    adjacent_agent: rel_x=5.63, rel_y=3.00, in_zone=False
+t=2.5, v=2.95, a=-2.17, danger=True
+    crossing_agent: rel_x=3.84, rel_y=0.20, in_zone=True
+    adjacent_agent: rel_x=5.64, rel_y=3.00, in_zone=False
+t=2.6, v=2.73, a=-1.84, danger=True
+    crossing_agent: rel_x=3.56, rel_y=0.40, in_zone=True
+    adjacent_agent: rel_x=5.66, rel_y=3.00, in_zone=False
+t=2.7, v=2.54, a=-1.57, danger=True
+    crossing_agent: rel_x=3.31, rel_y=0.60, in_zone=True
+    adjacent_agent: rel_x=5.71, rel_y=3.00, in_zone=False
+t=2.8, v=2.39, a=-1.33, danger=True
+    crossing_agent: rel_x=3.07, rel_y=0.80, in_zone=True
+    adjacent_agent: rel_x=5.77, rel_y=3.00, in_zone=False
+t=2.9, v=2.25, a=-1.13, danger=True
+    crossing_agent: rel_x=2.84, rel_y=1.00, in_zone=True
+    adjacent_agent: rel_x=5.84, rel_y=3.00, in_zone=False
+t=3.0, v=2.14, a=-0.96, danger=True
+    crossing_agent: rel_x=2.63, rel_y=1.20, in_zone=True
+    adjacent_agent: rel_x=5.93, rel_y=3.00, in_zone=False
+t=3.1, v=2.04, a=-0.82, danger=True
+    crossing_agent: rel_x=2.43, rel_y=1.40, in_zone=True
+    adjacent_agent: rel_x=6.03, rel_y=3.00, in_zone=False
+t=3.2, v=1.96, a=-0.69, danger=True
+    crossing_agent: rel_x=2.23, rel_y=1.60, in_zone=False
+    adjacent_agent: rel_x=6.13, rel_y=3.00, in_zone=False
+t=3.3, v=1.89, a=2.00, danger=False
+    crossing_agent: rel_x=2.04, rel_y=1.80, in_zone=False
+    adjacent_agent: rel_x=6.24, rel_y=3.00, in_zone=False
+t=3.4, v=2.09, a=2.00, danger=False
+    crossing_agent: rel_x=1.83, rel_y=2.00, in_zone=False
+    adjacent_agent: rel_x=6.33, rel_y=3.00, in_zone=False
+t=3.5, v=2.29, a=2.00, danger=False
+    crossing_agent: rel_x=1.60, rel_y=2.20, in_zone=False
+    adjacent_agent: rel_x=6.40, rel_y=3.00, in_zone=False
+t=3.6, v=2.49, a=2.00, danger=False
+    crossing_agent: rel_x=1.35, rel_y=2.40, in_zone=False
+    adjacent_agent: rel_x=6.45, rel_y=3.00, in_zone=False
+t=3.7, v=2.69, a=2.00, danger=False
+    crossing_agent: rel_x=1.08, rel_y=2.60, in_zone=False
+    adjacent_agent: rel_x=6.48, rel_y=3.00, in_zone=False
+t=3.8, v=2.89, a=2.00, danger=False
+    crossing_agent: rel_x=0.79, rel_y=2.80, in_zone=False
+    adjacent_agent: rel_x=6.49, rel_y=3.00, in_zone=False
+t=3.9, v=3.09, a=2.00, danger=False
+    crossing_agent: rel_x=0.48, rel_y=3.00, in_zone=False
+    adjacent_agent: rel_x=6.48, rel_y=3.00, in_zone=False
+t=4.0, v=3.29, a=2.00, danger=False
+    crossing_agent: rel_x=0.15, rel_y=3.20, in_zone=False
+    adjacent_agent: rel_x=6.45, rel_y=3.00, in_zone=False
+t=4.1, v=3.49, a=2.00, danger=False
+    crossing_agent: rel_x=-0.20, rel_y=3.40, in_zone=False
+    adjacent_agent: rel_x=6.40, rel_y=3.00, in_zone=False
+t=4.2, v=3.69, a=1.96, danger=False
+    crossing_agent: rel_x=-0.56, rel_y=3.60, in_zone=False
+    adjacent_agent: rel_x=6.34, rel_y=3.00, in_zone=False
+t=4.3, v=3.89, a=1.67, danger=False
+    crossing_agent: rel_x=-0.95, rel_y=3.80, in_zone=False
+    adjacent_agent: rel_x=6.25, rel_y=3.00, in_zone=False
+t=4.4, v=4.06, a=1.42, danger=False
+    crossing_agent: rel_x=-1.36, rel_y=4.00, in_zone=False
+    adjacent_agent: rel_x=6.14, rel_y=3.00, in_zone=False
+t=4.5, v=4.20, a=1.20, danger=False
+    crossing_agent: rel_x=-1.78, rel_y=4.20, in_zone=False
+    adjacent_agent: rel_x=6.02, rel_y=3.00, in_zone=False
+t=4.6, v=4.32, a=1.02, danger=False
+    crossing_agent: rel_x=-2.21, rel_y=4.40, in_zone=False
+    adjacent_agent: rel_x=5.89, rel_y=3.00, in_zone=False
+t=4.7, v=4.42, a=0.87, danger=False
+    crossing_agent: rel_x=-2.65, rel_y=4.60, in_zone=False
+    adjacent_agent: rel_x=5.75, rel_y=3.00, in_zone=False
+t=4.8, v=4.51, a=0.74, danger=False
+    crossing_agent: rel_x=-3.10, rel_y=4.80, in_zone=False
+    adjacent_agent: rel_x=5.60, rel_y=3.00, in_zone=False
+t=4.9, v=4.58, a=0.63, danger=False
+    crossing_agent: rel_x=-3.56, rel_y=5.00, in_zone=False
+    adjacent_agent: rel_x=5.44, rel_y=3.00, in_zone=False
+t=5.0, v=4.64, a=0.53, danger=False
+    crossing_agent: rel_x=-4.03, rel_y=5.20, in_zone=False
+    adjacent_agent: rel_x=5.27, rel_y=3.00, in_zone=False
+t=5.1, v=4.70, a=0.45, danger=False
+    crossing_agent: rel_x=-4.50, rel_y=5.40, in_zone=False
+    adjacent_agent: rel_x=5.10, rel_y=3.00, in_zone=False
+t=5.2, v=4.74, a=0.39, danger=False
+    crossing_agent: rel_x=-4.97, rel_y=5.60, in_zone=False
+    adjacent_agent: rel_x=4.93, rel_y=3.00, in_zone=False
+t=5.3, v=4.78, a=0.33, danger=False
+    crossing_agent: rel_x=-5.45, rel_y=5.80, in_zone=False
+    adjacent_agent: rel_x=4.75, rel_y=3.00, in_zone=False
+t=5.4, v=4.81, a=0.28, danger=False
+    crossing_agent: rel_x=-5.93, rel_y=6.00, in_zone=False
+    adjacent_agent: rel_x=4.57, rel_y=3.00, in_zone=False
+t=5.5, v=4.84, a=0.24, danger=False
+    crossing_agent: rel_x=-6.41, rel_y=6.20, in_zone=False
+    adjacent_agent: rel_x=4.39, rel_y=3.00, in_zone=False
+t=5.6, v=4.87, a=0.20, danger=False
+    crossing_agent: rel_x=-6.90, rel_y=6.40, in_zone=False
+    adjacent_agent: rel_x=4.20, rel_y=3.00, in_zone=False
+t=5.7, v=4.89, a=0.17, danger=False
+    crossing_agent: rel_x=-7.39, rel_y=6.60, in_zone=False
+    adjacent_agent: rel_x=4.01, rel_y=3.00, in_zone=False
+t=5.8, v=4.90, a=0.15, danger=False
+    crossing_agent: rel_x=-7.88, rel_y=6.80, in_zone=False
+    adjacent_agent: rel_x=3.82, rel_y=3.00, in_zone=False
+t=5.9, v=4.92, a=0.12, danger=False
+Simulation finished.
+Simulation time: 6 seconds
+Final ego position: (24.37, 0.00) m
+Final ego velocity: 4.93 m/s
+Interaction detected: True
+Saved:
+  world_trajectory.png
+  ego_centered_trajectory.png
+  ego_velocity.png
