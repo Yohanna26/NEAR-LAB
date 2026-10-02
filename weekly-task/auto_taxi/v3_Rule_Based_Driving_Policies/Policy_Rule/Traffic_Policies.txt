@@ -1,0 +1,152 @@
+Policies Chekc:
+dt = 0.1s
+totle time = 18s
+L= 2.99m
+max_acc = 2 m/s^2
+max_ decres_acc = 6 m/s^2
+max_yaw = 0.5rad
+target_speed & limits = 5m/s = 18km/h
+
+
+1. Light
+Initial: x=0, y=0, yaw=0, v=8 m/s
+Stop line x=30 m; The light is red for the first 8 seconds and turns green at the 8th second
+Don't cross the line when the light is red. Stop within 0 to 1 meter from the line; The position remains unchanged while waiting. The speed exceeds 0.5 m/s after the green light
+Results:
+t= 0.00 s | v= 8.00 m/s | d= 26.30 m | STOP_FOR_RED
+t= 6.10 s | v= 0.00 m/s | d=  0.78 m | WAIT_AT_RED
+t= 8.00 s | v= 0.00 m/s | d=  0.78 m | LANE_FOLLOW
+PASS: No stop-line crossing during red
+PASS: Stopped within 1 m of the line
+PASS: Restarted after green
+PASS: Held position while red
+0-6.1s: from 8 m/s decrease, stop in front of the stop line 0.78m
+6.1-8s: keep stay
+at 8s: LANE_FOLLOW, and step up
+
+2. Stop signs allow passage at fixed times
+Initial: x=0, y=0, yaw=0, v=8 m/s
+Stop line x=30 m; Stop steadily and hold for at least 1 second; The intersection was cleared in the 10th second
+Complete the parking hold; Before the Qing Dynasty, it did not cross the line and remained still. After emptying, set off again
+t= 0.00 s | v= 8.00 m/s | d= 26.30 m | BLOCKED | STOP_FOR_SIGN
+t= 6.10 s | v= 0.00 m/s | d=  0.78 m | BLOCKED | HOLD_AT_STOP_SIGN
+t= 7.10 s | v= 0.00 m/s | d=  0.78 m | BLOCKED | WAIT_AT_STOP_SIGN
+t=10.00 s | v= 0.00 m/s | d=  0.78 m | CLEAR | LANE_FOLLOW
+PASS: No crossing before release
+PASS: Stopped within 1 m of the line
+PASS: Restarted after release
+PASS: Held position before release
+PASS: Stopped for at least 1 second
+PASS: Entered stop-hold state
+PASS: Waited for intersection clearance
+
+3. Stop Sign Agent (across car)--》The stop sign allows moving vehicles to pass
+Cross the vehicle initially (32,-4) m, Initial: x=0, y=0, yaw=0, v=8 m/s
+The speed of the crossing vehicle (vx,vy)=(0,1) m/s; Conflict zone:
+x-32
+t= 0.00 s | v= 8.00 m/s | d= 26.30 m | BLOCKED | STOP_FOR_SIGN
+t= 6.10 s | v= 0.00 m/s | d=  0.78 m | BLOCKED | HOLD_AT_STOP_SIGN
+t= 7.10 s | v= 0.00 m/s | d=  0.78 m | BLOCKED | WAIT_AT_STOP_SIGN
+t= 9.10 s | v= 0.00 m/s | d=  0.78 m | CLEAR | LANE_FOLLOW
+Checks:
+PASS: No crossing before release
+PASS: Stopped within 1 m of the line
+PASS: Restarted after release
+PASS: Held position before release
+PASS: Stopped for at least 1 second
+PASS: Entered stop-hold state
+PASS: Waited for intersection clearance
+PASS: No crossing while agent occupies intersection
+PASS: Agent moved through conflict region
+
+4. lane follow
+x=0, y=1 m, yaw=0.1 rad≈5.73°, v=5 m/s
+The target centerline y=0; The tracking target point is located 10 meters ahead of the vehicle
+In the last 3 seconds, the lateral error is less than 0.1m and the heading error is less than 1°. Steering does not exceed the limit; Keep driving forward
+t= 0.00 s | y=  1.000 m | yaw=  5.730 deg | delta=-0.1175 rad | LANE_FOLLOW
+t= 2.00 s | y=  0.830 m | yaw= -4.434 deg | delta=-0.0032 rad | LANE_FOLLOW
+t= 4.00 s | y=  0.171 m | yaw= -2.438 deg | delta= 0.0152 rad | LANE_FOLLOW
+t= 6.00 s | y= -0.050 m | yaw= -0.291 deg | delta= 0.0061 rad | LANE_FOLLOW
+t= 8.00 s | y= -0.042 m | yaw=  0.225 deg | delta= 0.0001 rad | LANE_FOLLOW
+t=10.00 s | y= -0.008 m | yaw=  0.122 deg | delta=-0.0008 rad | LANE_FOLLOW
+t=12.00 s | y=  0.003 m | yaw=  0.014 deg | delta=-0.0003 rad | LANE_FOLLOW
+t=14.00 s | y=  0.002 m | yaw= -0.011 deg | delta=-0.0000 rad | LANE_FOLLOW
+t=16.00 s | y=  0.000 m | yaw= -0.006 deg | delta= 0.0000 rad | LANE_FOLLOW
+t=18.00 s | y= -0.000 m | yaw= -0.001 deg | delta= 0.0000 rad | LANE_FOLLOW
+PASS: Lateral error below 0.1 m in final 3 seconds
+PASS: Heading error below 1 degree in final 3 seconds
+PASS: Steering stayed within limits
+PASS: Vehicle continued moving forward
+[login1 v3_Rule_Based_Driving_Policies:24]
+
+5. Lane changing is allowed.
+x=0, y=0, yaw=0, v=5 m/s
+The original center line y=0, and the new center line y= 3.6m; The reference path starts from x=0 and is 30 meters in length. Set "Mark Allowed", "Turn signal on", and "path cleared" all to True
+The lane-changing policy has been triggered. In the last 3 seconds, the distance from the new centerline is less than 0.1m and the heading error is less than 1°. Restore new lane following; The steering does not exceed the limit
+
+t= 0.00 s | y=  0.000 m | yaw=  0.000 deg | delta= 0.0619 rad | LANE_CHANGE
+t= 2.00 s | y=  0.858 m | yaw=  9.089 deg | delta= 0.0243 rad | LANE_CHANGE
+t= 4.00 s | y=  2.584 m | yaw=  9.244 deg | delta=-0.0246 rad | LANE_CHANGE
+t= 6.00 s | y=  3.610 m | yaw=  1.716 deg | delta=-0.0315 rad | LANE_CHANGE
+t= 6.30 s | y=  3.647 m | yaw=  0.890 deg | delta=-0.0121 rad | LANE_FOLLOW
+t= 8.00 s | y=  3.680 m | yaw= -0.239 deg | delta=-0.0023 rad | LANE_FOLLOW
+t=10.00 s | y=  3.627 m | yaw= -0.261 deg | delta= 0.0011 rad | LANE_FOLLOW
+t=12.00 s | y=  3.599 m | yaw= -0.063 deg | delta= 0.0007 rad | LANE_FOLLOW
+t=14.00 s | y=  3.596 m | yaw=  0.012 deg | delta= 0.0001 rad | LANE_FOLLOW
+t=16.00 s | y=  3.599 m | yaw=  0.013 deg | delta=-0.0001 rad | LANE_FOLLOW
+t=18.00 s | y=  3.600 m | yaw=  0.003 deg | delta=-0.0000 rad | LANE_FOLLOW
+Checks:
+PASS: Lateral error below 0.1 m in final 3 seconds
+PASS: Heading error below 1 degree in final 3 seconds
+PASS: Steering stayed within limits
+PASS: Vehicle continued moving forward
+PASS: Lane-change policy activated
+PASS: Resumed lane following on new lane
+[login1 v3_Rule_Based_Driving_Policies:28]
+
+
+6. Do not change lanes when blocked
+t= 0.00 s | y=  0.000 m | yaw=  0.000 deg | delta= 0.0619 rad | LANE_CHANGE
+t= 2.00 s | y=  0.858 m | yaw=  9.089 deg | delta= 0.0243 rad | LANE_CHANGE
+t= 4.00 s | y=  2.584 m | yaw=  9.244 deg | delta=-0.0246 rad | LANE_CHANGE
+t= 6.00 s | y=  3.610 m | yaw=  1.716 deg | delta=-0.0315 rad | LANE_CHANGE
+t= 6.30 s | y=  3.647 m | yaw=  0.890 deg | delta=-0.0121 rad | LANE_FOLLOW
+t= 8.00 s | y=  3.680 m | yaw= -0.239 deg | delta=-0.0023 rad | LANE_FOLLOW
+t=10.00 s | y=  3.627 m | yaw= -0.261 deg | delta= 0.0011 rad | LANE_FOLLOW
+t=12.00 s | y=  3.599 m | yaw= -0.063 deg | delta= 0.0007 rad | LANE_FOLLOW
+t=14.00 s | y=  3.596 m | yaw=  0.012 deg | delta= 0.0001 rad | LANE_FOLLOW
+t=16.00 s | y=  3.599 m | yaw=  0.013 deg | delta=-0.0001 rad | LANE_FOLLOW
+t=18.00 s | y=  3.600 m | yaw=  0.003 deg | delta=-0.0000 rad | LANE_FOLLOW
+Checks:
+PASS: Lateral error below 0.1 m in final 3 seconds
+PASS: Heading error below 1 degree in final 3 seconds
+PASS: Steering stayed within limits
+PASS: Vehicle continued moving forward
+PASS: Lane-change policy activated
+PASS: Resumed lane following on new lane
+[login1 v3_Rule_Based_Driving_Policies:31]
+
+
+7.It can start and complete the lane change when the conditions become safe
+t= 0.00 s | y=  0.000 m | yaw=  0.000 deg | delta= 0.0000 rad | WAIT_TO_CHANGE_LANE
+t= 2.00 s | y=  0.000 m | yaw=  0.000 deg | delta= 0.0000 rad | WAIT_TO_CHANGE_LANE
+t= 3.60 s | y=  0.000 m | yaw=  0.000 deg | delta= 0.0619 rad | LANE_CHANGE
+t= 4.00 s | y=  0.031 m | yaw=  2.334 deg | delta= 0.0584 rad | LANE_CHANGE
+t= 6.00 s | y=  1.185 m | yaw=  9.875 deg | delta= 0.0142 rad | LANE_CHANGE
+t= 8.00 s | y=  2.893 m | yaw=  8.165 deg | delta=-0.0341 rad | LANE_CHANGE
+t= 9.90 s | y=  3.647 m | yaw=  0.890 deg | delta=-0.0121 rad | LANE_FOLLOW
+t=10.00 s | y=  3.655 m | yaw=  0.774 deg | delta=-0.0114 rad | LANE_FOLLOW
+t=12.00 s | y=  3.671 m | yaw= -0.308 deg | delta=-0.0010 rad | LANE_FOLLOW
+t=14.00 s | y=  3.618 m | yaw= -0.218 deg | delta= 0.0012 rad | LANE_FOLLOW
+t=16.00 s | y=  3.597 m | yaw= -0.038 deg | delta= 0.0006 rad | LANE_FOLLOW
+t=18.00 s | y=  3.596 m | yaw=  0.016 deg | delta= 0.0000 rad | LANE_FOLLOW
+Checks:
+PASS: Lateral error below 0.1 m in final 3 seconds
+PASS: Heading error below 1 degree in final 3 seconds
+PASS: Steering stayed within limits
+PASS: Vehicle continued moving forward
+PASS: Lane-change policy activated
+PASS: Resumed lane following on new lane
+PASS: Waited in original lane while blocked
+PASS: Started changing only after gap was safe
+[login1 v3_Rule_Based_Driving_Policies:38]

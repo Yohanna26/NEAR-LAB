@@ -14,7 +14,7 @@ class PolicyManager:
         self.light_policy = TrafficLightPolicy()
         self.stop_policy = StopSignPolicy()
 
-    def step(self, ego, observation):
+    def step(self, ego, observation, dt=0.1):
         lane = observation["lane"]
         change = observation.get("lane_change")
         turn = observation.get("turn")
@@ -40,19 +40,23 @@ class PolicyManager:
             ego,
             observation.get("traffic_light"),
             self.limits,
+            dt,
         )
         if light is not None:
             a, state = light
-            return a, 0.0, state
+            steering_angle = proposed[1]
+            return a, steering_angle, state
 
         stop_sign = self.stop_policy.evaluate(
             ego,
             observation.get("stop_sign"),
             self.limits,
+            dt,
         )
         if stop_sign is not None:
             a, state = stop_sign
-            return a, 0.0, state
+            steering_angle = proposed[1]
+            return a, steering_angle, state
 
         vehicle = vehicle_yield_policy(
             ego,
